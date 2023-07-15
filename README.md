@@ -1,39 +1,38 @@
-# Script de Processamento de Arquivos Excel
+# Excel File Processing Script
 
-Este script Python permite processar arquivos Excel, realizar consultas ao banco de dados SQL Server e mover as linhas correspondentes para as pastas "Processado" ou "Rejeitado", de acordo com determinadas condições.
+This Python script allows you to process Excel files, query the SQL Server database and move the corresponding lines to the "Processed" or "Rejected" folders, according to certain conditions.
 
-## Requisitos
+## Requirements
 
 - Python 3.x
-- Bibliotecas Python: pyodbc, pandas, openpyxl
+- Python libraries: pyodbc, pandas, openpyxl
 
-Certifique-se de ter as bibliotecas necessárias instaladas antes de executar o script.
+Make sure you have the necessary libraries installed before running the script.
 
-## Configuração
+## Settings
 
-1. Defina as configurações do banco de dados SQL Server no código, fornecendo o nome do servidor, nome do banco de dados e credenciais (se aplicável).
+1. Configure the SQL Server database settings in code, providing the server name, database name, and credentials (if applicable).
 
-2. Defina os caminhos das pastas onde os arquivos Excel serão lidos, processados, rejeitados e onde os logs serão armazenados.
+2. Define folder paths where Excel files will be read, processed, rejected and where logs will be stored.
 
-3. Crie as tabelas necessárias no banco de dados usando o script SQL fornecido no arquivo `create_tables.sql`. Certifique-se de ter o SQL Server configurado corretamente e tenha privilégios para criar tabelas e inserir dados.
+3. Create the necessary tables in the database using the SQL script provided in the `create_tables.sql` file. Make sure you have SQL Server configured correctly and have privileges to create tables and insert data.
 
-## Utilização
+## Usage
 
-1. Coloque os arquivos Excel na pasta especificada (`caminho_pasta`).
+1. Place the Excel files in the specified folder (`folder_path`).
 
-2. Execute o script Python `main.py`.
+2. Run the `main.py` Python script.
 
-3. O script lerá cada arquivo Excel, realizará consultas ao banco de dados, atualizará as linhas correspondentes e moverá os arquivos para as pastas "Processado" ou "Rejeitado".
+3. The script will read each Excel file, query the database, update the corresponding lines and move the files to the "Processed" or "Rejected" folders.
 
-4. Os logs de processamento serão registrados nos arquivos `log_basico.txt` e `log_<arquivo_excel>.txt`, fornecendo informações sobre as linhas processadas, atualizadas e rejeitadas.
+4. The processing logs will be registered in the `log_basico.txt` and `log_<excel_file>.txt` files, providing information about processed, updated and rejected lines.
 
-Certifique-se de ter as permissões adequadas nos diretórios e arquivos necessários.
+Make sure you have proper permissions on the required directories and files.
 
-## Observações
+## Comments
 
-- O script assume que os arquivos Excel têm as colunas "Sequencial" e "Cnpj" que serão usadas para a consulta e atualização no banco de dados.
+- The script assumes that the Excel files have "Sequential" and "Cnpj" columns that will be used for querying and updating the database.
 
-- Certifique-se de que as tabelas e colunas do banco de dados correspondam corretamente às consultas e atualizações realizadas no script.
+- Make sure the database tables and columns correctly match the queries and updates performed in the script.
 
-- Verifique e ajuste o script de acordo com as necessidades específicas do seu ambiente e dados.
-
+- Check and adjust the script according to the specific needs of your environment and data.
