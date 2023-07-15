@@ -15,7 +15,7 @@ Make sure you have the necessary libraries installed before running the script.
 
 2. Define folder paths where Excel files will be read, processed, rejected and where logs will be stored.
 
-3. Create the necessary tables in the database using the SQL script provided in the `create_tables.sql` file. Make sure you have SQL Server configured correctly and have privileges to create tables and insert data.
+3. Create the necessary tables in the database using the SQL script provided in the `banco.sql` file or edit your own tables. Make sure you have SQL Server configured correctly and have privileges to create tables and insert data.
 
 ## Usage
 
